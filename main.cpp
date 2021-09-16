@@ -4,22 +4,15 @@ using namespace std;
 
 int main()
 {
-    int a, b, c, cnt;
-    cout << "Enter three numbers: ";
-    cin >> a >> b >> c;
+    int num[3], cnt;
+    cout << "Enter 3 number: ";
+    cin >> num[0] >> num[1] >> num[2];
     cnt = 0;
-    if (a % 2 == 0)
-        cnt = cnt + 1;
-    //   cout << cnt;
-    // Tăng lên 1 đơn vị nếu a là số chẵn
-    if (b % 2 == 0)
-        cnt = cnt + 1;
-    //   cout << cnt;
-    if (c % 2 == 0)
-        cnt = cnt + 1;
-    //   cout << cnt;
-    cout << "So luong so chan la: " << cnt;
-    cout << "";
+    for (int i = 0; i < 3; i++)
+        if (num[i] % 2 == 0)
+            cnt++;
+
+    cout << "Here is the number of even: " << cnt << "\n";
     system("pause");
     return 0;
 }
